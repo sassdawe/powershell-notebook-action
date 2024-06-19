@@ -1,63 +1,27 @@
-name: 'PowerShell Sharing Settings as Code'
-
-description: 'Define and enforce SharePoint Online sharing settings with GitHub Actions.'
-
+name: 'PowerShell Notebook Action'
+description: 'Invoke PowerShell Notebooks as part of your pipeline'
+author: 'sassdawe'
 branding:
   icon: 'briefcase'
-  color: 'blue'
-
+  color: 'red'
 inputs:
-  SHAREPOINT_ADMIN_URL:
-    description: 'URL of the SharePoint Admin Site'
+  NotebookPath:
+    description: 'path of the Notebook to invoke'
     required: true
-  CLIENT_ID:
-    description: 'Client Id of App Registration with SharePoint Online permissions'
-    required: true
-  CLIENT_SECRET:
-    description: 'Client Secret of App Registration with SharePoint Online permissions'
-    required: true
-  SHARINGCAPABILITY_DISABLED_SITES:
-    description: 'Comma separated list of URLS where to disable sharing capability. Or "null" or "ALLELSE".'
-    required: false
-    default: 'null'
-  SHARINGCAPABILITY_EXTERNALUSERSHARINGONLY_SITES:
-    description: 'Comma separated list of URLS where to enable sharing capability for external users only. Or "null" or "ALLELSE".'
-    required: false
-    default: 'null'
-  SHARINGCAPABILITY_EXTERNALUSERANDGUESTSHARING_SITES:
-    description: 'Comma separated list of URLS where to enable sharing capability for both external users and guests. Or "null" or "ALLELSE".'
-    required: false
-    default: 'null'
-  SHARINGCAPABILITY_EXISTINGEXTERNALUSERSHARINGONLY_SITES:
-    description: 'Comma separated list of URLS where to enable sharing capability for existing external users only. Or "null" or "ALLELSE".'
-    required: false
-    default: 'null'
-
 runs:
   using: "composite"
   steps:
     - shell: pwsh
-      id: SharingCapability
+      id: InvokeNotebook
       run: |
-        Write-Output "::group::My Awesome Function!"
-        Write-Output "::notice File=SetSharingSettings.ps1::Running script to enforce sharing settings!"
-        Write-Output "::endgroup::"
-
         try {
-
           # splat parameters
           $inputParam = @{
-            AdminUrl = '${{ inputs.SHAREPOINT_ADMIN_URL }}'
-            ClientId = '${{ inputs.CLIENT_ID }}'
-            ClientSecret = '${{ inputs.CLIENT_SECRET }}'
-            SharingCapabilityDisabled = '${{ inputs.SHARINGCAPABILITY_DISABLED_SITES }}'
-            SharingCapabilityExternalUserSharingOnly = '${{ inputs.SHARINGCAPABILITY_EXTERNALUSERSHARINGONLY_SITES }}'
-            SharingCapabilityExternalUserAndGuestSharing = '${{ inputs.SHARINGCAPABILITY_EXTERNALUSERANDGUESTSHARING_SITES }}'
-            SharingCapabilityExistingExternalUserSharingOnly = '${{ inputs.SHARINGCAPABILITY_EXISTINGEXTERNALUSERSHARINGONLY_SITES }}'
+            Path = '${{ inputs.NotebookPath }}'
           }
 
-          Write-Output "::Group::Trying to run stuff"
-          & $env:GITHUB_ACTION_PATH\SetSharingSettings.ps1 @inputParam | Write-Output
+          Write-Output "::Group::InvokeNotebook"
+          & $env:GITHUB_ACTION_PATH\Notebook-Runner.ps1 @inputParam | Write-Output
 
           # Write to standard output
           # Write-Output "::notice::Result: $($res -join ',')"
@@ -70,6 +34,6 @@ runs:
           #"IconResult=$($res -join ',')" >> $env:GITHUB_OUTPUT
         }
         catch {
-          Write-Output "::error file=SetSharingSettings.ps1::Failed to run!"
+          Write-Output "::error::Failed to run!"
           $_ | fl | Write-Output
         }
