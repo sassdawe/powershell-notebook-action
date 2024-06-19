@@ -1,0 +1,190 @@
+<Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
+  <Obj RefId="0">
+    <TN RefId="0">
+      <T>Microsoft.PowerShell.Commands.PSRepositoryItemInfo</T>
+      <T>System.Management.Automation.PSCustomObject</T>
+      <T>System.Object</T>
+    </TN>
+    <MS>
+      <S N="Name">PowerShellNotebook</S>
+      <S N="Version">3.0.0</S>
+      <S N="Type">Module</S>
+      <S N="Description">Lets you automate both PowerShell &amp; SQL Notebooks with PowerShell at the command line, exports to Excel and more._x000D__x000A_For detailed instructions and examples, click through the "Project Site" link or go to https://github.com/dfinke/PowerShellNotebook/blob/master/README.md</S>
+      <S N="Author">Douglas Finke</S>
+      <S N="CompanyName">DougFinke</S>
+      <S N="Copyright">c 2020 All rights reserved.</S>
+      <DT N="PublishedDate">2022-10-21T19:36:34+00:00</DT>
+      <Nil N="InstalledDate" />
+      <Nil N="UpdatedDate" />
+      <URI N="LicenseUri">https://github.com/dfinke/PowerShellNotebook/blob/master/LICENSE</URI>
+      <URI N="ProjectUri">https://github.com/dfinke/PowerShellNotebook</URI>
+      <Nil N="IconUri" />
+      <Obj N="Tags" RefId="1">
+        <TN RefId="1">
+          <T>System.Object[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
+        <LST>
+          <S>PowerShell</S>
+          <S>Notebook</S>
+          <S>Jupyter</S>
+          <S>IPYNB</S>
+          <S>SQL</S>
+          <S>Azure</S>
+          <S>AzureDataStudio</S>
+          <S>PSModule</S>
+        </LST>
+      </Obj>
+      <Obj N="Includes" RefId="2">
+        <TN RefId="2">
+          <T>System.Collections.Hashtable</T>
+          <T>System.Object</T>
+        </TN>
+        <DCT>
+          <En>
+            <S N="Key">DscResource</S>
+            <Obj N="Value" RefId="3">
+              <TNRef RefId="1" />
+              <LST />
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">RoleCapability</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">Function</S>
+            <Obj N="Value" RefId="4">
+              <TNRef RefId="1" />
+              <LST>
+                <S>Add-NotebookCode</S>
+                <S>Add-NotebookMarkdown</S>
+                <S>Convert-MarkdownToNoteBook</S>
+                <S>ConvertFrom-DIB</S>
+                <S>ConvertFrom-IPYNB</S>
+                <S>ConvertFrom-NotebookToMarkdown</S>
+                <S>ConvertFrom-NotebookToHTML</S>
+                <S>ConvertTo-Dib</S>
+                <S>ConvertTo-PowerShellNoteBook</S>
+                <S>ConvertTo-SQLNoteBook</S>
+                <S>Export-NotebookToPowerShellScript</S>
+                <S>Export-NotebookToSqlScript</S>
+                <S>Export-AsPowerShellNotebook</S>
+                <S>Find-ParameterizedCell</S>
+                <S>Get-DIBBlock</S>
+                <S>Get-Notebook</S>
+                <S>Get-NotebookContent</S>
+                <S>Get-ParameterInsertionIndex</S>
+                <S>Get-ParsedSql</S>
+                <S>Get-ParsedSqlOffsets</S>
+                <S>Invoke-ExecuteNotebook</S>
+                <S>Invoke-PowerShellNotebook</S>
+                <S>loadScriptDomModules</S>
+                <S>New-CodeCell</S>
+                <S>New-GistNotebook</S>
+                <S>New-PSNotebook</S>
+                <S>New-PSNotebookRunspace</S>
+                <S>New-SQLNotebook</S>
+                <S>Set-NotebookToPS</S>
+                <S>Test-HasParameterizedCell</S>
+                <S>New-InteractiveNotebook</S>
+                <S>Open-InteractiveNotebook</S>
+                <S>Test-Uri</S>
+              </LST>
+            </Obj>
+          </En>
+          <En>
+            <S N="Key">Cmdlet</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">Workflow</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+          <En>
+            <S N="Key">Command</S>
+            <Obj N="Value" RefId="5">
+              <TNRef RefId="1" />
+              <LST>
+                <S>Add-NotebookCode</S>
+                <S>Add-NotebookMarkdown</S>
+                <S>Convert-MarkdownToNoteBook</S>
+                <S>ConvertFrom-DIB</S>
+                <S>ConvertFrom-IPYNB</S>
+                <S>ConvertFrom-NotebookToMarkdown</S>
+                <S>ConvertFrom-NotebookToHTML</S>
+                <S>ConvertTo-Dib</S>
+                <S>ConvertTo-PowerShellNoteBook</S>
+                <S>ConvertTo-SQLNoteBook</S>
+                <S>Export-NotebookToPowerShellScript</S>
+                <S>Export-NotebookToSqlScript</S>
+                <S>Export-AsPowerShellNotebook</S>
+                <S>Find-ParameterizedCell</S>
+                <S>Get-DIBBlock</S>
+                <S>Get-Notebook</S>
+                <S>Get-NotebookContent</S>
+                <S>Get-ParameterInsertionIndex</S>
+                <S>Get-ParsedSql</S>
+                <S>Get-ParsedSqlOffsets</S>
+                <S>Invoke-ExecuteNotebook</S>
+                <S>Invoke-PowerShellNotebook</S>
+                <S>loadScriptDomModules</S>
+                <S>New-CodeCell</S>
+                <S>New-GistNotebook</S>
+                <S>New-PSNotebook</S>
+                <S>New-PSNotebookRunspace</S>
+                <S>New-SQLNotebook</S>
+                <S>Set-NotebookToPS</S>
+                <S>Test-HasParameterizedCell</S>
+                <S>New-InteractiveNotebook</S>
+                <S>Open-InteractiveNotebook</S>
+                <S>Test-Uri</S>
+              </LST>
+            </Obj>
+          </En>
+        </DCT>
+      </Obj>
+      <Nil N="PowerShellGetFormatVersion" />
+      <Nil N="ReleaseNotes" />
+      <Obj N="Dependencies" RefId="6">
+        <TNRef RefId="1" />
+        <LST />
+      </Obj>
+      <S N="RepositorySourceLocation">https://www.powershellgallery.com/api/v2</S>
+      <S N="Repository">PSGallery</S>
+      <S N="PackageManagementProvider">NuGet</S>
+      <Obj N="AdditionalMetadata" RefId="7">
+        <TN RefId="3">
+          <T>System.Management.Automation.PSCustomObject</T>
+          <T>System.Object</T>
+        </TN>
+        <MS>
+          <S N="copyright">c 2020 All rights reserved.</S>
+          <S N="description">Lets you automate both PowerShell &amp; SQL Notebooks with PowerShell at the command line, exports to Excel and more._x000D__x000A_For detailed instructions and examples, click through the "Project Site" link or go to https://github.com/dfinke/PowerShellNotebook/blob/master/README.md</S>
+          <S N="requireLicenseAcceptance">False</S>
+          <S N="isLatestVersion">True</S>
+          <S N="isAbsoluteLatestVersion">True</S>
+          <S N="versionDownloadCount">830</S>
+          <S N="downloadCount">2695</S>
+          <S N="packageSize">1913257</S>
+          <S N="published">10/21/2022 19:36:34 +00:00</S>
+          <S N="created">10/21/2022 19:36:34 +00:00</S>
+          <S N="lastUpdated">06/13/2024 09:39:31 +00:00</S>
+          <S N="tags">PowerShell Notebook Jupyter IPYNB SQL Azure AzureDataStudio PSModule PSFunction_Add-NotebookCode PSCommand_Add-NotebookCode PSFunction_Add-NotebookMarkdown PSCommand_Add-NotebookMarkdown PSFunction_Convert-MarkdownToNoteBook PSCommand_Convert-MarkdownToNoteBook PSFunction_ConvertFrom-DIB PSCommand_ConvertFrom-DIB PSFunction_ConvertFrom-IPYNB PSCommand_ConvertFrom-IPYNB PSFunction_ConvertFrom-NotebookToMarkdown PSCommand_ConvertFrom-NotebookToMarkdown PSFunction_ConvertFrom-NotebookToHTML PSCommand_ConvertFrom-NotebookToHTML PSFunction_ConvertTo-Dib PSCommand_ConvertTo-Dib PSFunction_ConvertTo-PowerShellNoteBook PSCommand_ConvertTo-PowerShellNoteBook PSFunction_ConvertTo-SQLNoteBook PSCommand_ConvertTo-SQLNoteBook PSFunction_Export-NotebookToPowerShellScript PSCommand_Export-NotebookToPowerShellScript PSFunction_Export-NotebookToSqlScript PSCommand_Export-NotebookToSqlScript PSFunction_Export-AsPowerShellNotebook PSCommand_Export-AsPowerShellNotebook PSFunction_Find-ParameterizedCell PSCommand_Find-ParameterizedCell PSFunction_Get-DIBBlock PSCommand_Get-DIBBlock PSFunction_Get-Notebook PSCommand_Get-Notebook PSFunction_Get-NotebookContent PSCommand_Get-NotebookContent PSFunction_Get-ParameterInsertionIndex PSCommand_Get-ParameterInsertionIndex PSFunction_Get-ParsedSql PSCommand_Get-ParsedSql PSFunction_Get-ParsedSqlOffsets PSCommand_Get-ParsedSqlOffsets PSFunction_Invoke-ExecuteNotebook PSCommand_Invoke-ExecuteNotebook PSFunction_Invoke-PowerShellNotebook PSCommand_Invoke-PowerShellNotebook PSFunction_loadScriptDomModules PSCommand_loadScriptDomModules PSFunction_New-CodeCell PSCommand_New-CodeCell PSFunction_New-GistNotebook PSCommand_New-GistNotebook PSFunction_New-PSNotebook PSCommand_New-PSNotebook PSFunction_New-PSNotebookRunspace PSCommand_New-PSNotebookRunspace PSFunction_New-SQLNotebook PSCommand_New-SQLNotebook PSFunction_Set-NotebookToPS PSCommand_Set-NotebookToPS PSFunction_Test-HasParameterizedCell PSCommand_Test-HasParameterizedCell PSFunction_New-InteractiveNotebook PSCommand_New-InteractiveNotebook PSFunction_Open-InteractiveNotebook PSCommand_Open-InteractiveNotebook PSFunction_Test-Uri PSCommand_Test-Uri PSIncludes_Function</S>
+          <S N="developmentDependency">False</S>
+          <S N="updated">2024-06-13T09:39:31Z</S>
+          <S N="NormalizedVersion">3.0.0</S>
+          <S N="Authors">Douglas Finke</S>
+          <S N="IsPrerelease">false</S>
+          <S N="ItemType">Module</S>
+          <S N="FileList">PowerShellNotebook.nuspec|GetParameterInsertionIndex.ps1|changelog.ipynb|ConvertToDib.ps1|FindParameterizedCell.ps1|input.ipynb|NewCodeCell.ps1|PowerShellNotebookDSL.ps1|TestUri.ps1|Examples\ShowGraphInBrowser.ps1|media\ADSPowerShellNoteBook.png|media\EnableLanguageForDSL.png|samplenotebook\Chapter01code.ipynb|samplenotebook\python.ipynb|changelog.md|ConvertToPowerShellNoteBook.ps1|Get-CredentialFromWindowsCredentialManager.ps1|InvokeExecuteNotebook.ps1|NewGistNotebook.ps1|PublishToGallery.ps1|Watch-Directory.ps1|MarkdownExamples\demo.ipynb|media\ConvertedFromDemoText.png|media\InvokePowerShellNotebook.png|samplenotebook\csharp.ipynb|samplenotebook\SimpleNotebookToTestConvertToMarkdown.ipynb|ConvertFrom-DIB.ps1|ConvertToSQLNoteBook.ps1|Get-DIBBlock.ps1|InvokePowerShellNotebook.ps1|Open-InteractiveNotebook.ps1|README.md|.devcontainer\devcontainer.json|MarkdownExamples\demo.md|media\ConvertMarkdownToNotebook.png|media\InvokePowerShellNotebookAsExcel.png|samplenotebook\fsharp.ipynb|samplenotebook\SingleCodeBlock.ipynb|ConvertFrom-IPYNB.ps1|ExportAsPowerShellNotebook.ps1|GetNotebook.ps1|LICENSE|SetNotebookToPs.ps1|.devcontainer\Dockerfile|MarkdownExamples\multiplePSLines.ipynb|media\CreateNotebookUsingTheDSL.png|media\IsParameterCell.png|samplenotebook\MDandCodeSrcAsArray.ipynb|.devcontainer\library-scripts\common-debian.sh|ConvertFromNotebookToMarkdown.ps1|ExportNotebookToPowerShellScript.ps1|GetNotebookContent.ps1|New-InteractiveNotebook.ps1|PowerShellNotebook.psd1|TestAzureBlobStorageUrl.ps1|ContinuousIntegration\ContinuousIntegration.ps1|MarkdownExamples\multiplePSLines.md|media\CvtFromMarkdown.png|media\ParametersTag.gif|samplenotebook\powershell.ipynb|.github\workflows\ci.yml|ConvertMarkdownToNoteBook.ps1|ExportNotebookToSqlScript.ps1|GetNotebookDisplayData.ps1|PowerShellNotebook.psm1|TestHasParameterizedCell.ps1</S>
+          <S N="GUID">2ab0cb25-b339-4726-8a2a-349ca1114bd4</S>
+          <S N="PowerShellVersion">6.2</S>
+          <S N="CompanyName">Doug Finke</S>
+        </MS>
+      </Obj>
+      <S N="InstalledLocation">/workspaces/pwsh-notebook-action/Modules/PowerShellNotebook/3.0.0</S>
+    </MS>
+  </Obj>
+</Objs>
